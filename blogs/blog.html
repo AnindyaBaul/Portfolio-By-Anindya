@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <!-- Start of Async Drift Code -->
+    <script>
+        "use strict";
+
+        !function () {
+            var t = window.driftt = window.drift = window.driftt || [];
+            if (!t.init) {
+                if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+                t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+                    t.factory = function (e) {
+                        return function () {
+                            var n = Array.prototype.slice.call(arguments);
+                            return n.unshift(e), t.push(n), t;
+                        };
+                    }, t.methods.forEach(function (e) {
+                        t[e] = t.factory(e);
+                    }), t.load = function (t) {
+                        var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                        var i = document.getElementsByTagName("script")[0];
+                        i.parentNode.insertBefore(o, i);
+                    };
+            }
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('2ak94wchk2ff');
+    </script>
+    <!-- End of Async Drift Code -->
+
+    <link rel="stylesheet" href="./style.css">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- font-awesome -->
+    <link href="https://kit-pro.fontawesome.com/releases/v6.0.0/css/pro.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- g-fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>
+
+</head>
+
+
+<body class=" position-relative">
+    <div class="pre-loader-cont" id="preLoaderCont">
+        <div class="pre-img-cont">
+            <img src="./image/New folder/logo svg code.svg" style="width: 100%;" alt="">
+        </div>
+    </div>
+    <header>
+        <nav class="navbar navbar-light nav1">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./image/New folder/logo svg code.svg" alt="" style="width: 230px;height: 70px;">
+                </a>
+
+                <div id="lightBtn" onclick="lightMode()" class=" light-btn" style="">
+                    <i style="position: relative; top: 2px; display: inline-block!important; margin: auto; margin-left: 7px;"
+                        class="fa-solid fa-sun-bright"></i>
+                </div>
+                <div id="darkBtn" onclick="darkMode()" class="  dark-btn" style="">
+                    <i style="position: relative; top: 2px;" class="fa-solid fa-moon-cloud"></i>
+                </div>
+            </div>
+        </nav>
+
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light  nav2">
+                <div class="container-fluid mobile-nav-cont">
+                    <img id="mobile-logo" src="./image/New folder/logo svg code.svg" style="width: 150px;height: 60px;"
+                        alt="">
+                    <div id="lightBtn2" onclick="lightMode()" class=" light-btn" style="">
+                        <i style="position: relative; top: 2px; display: inline-block!important; margin: auto; margin-left: 7px;"
+                            class="fa-solid fa-sun-bright"></i>
+                    </div>
+                    <div id="darkBtn2" onclick="darkMode()" class="  dark-btn" style="">
+                        <i style="position: relative; top: 2px;" class="fa-solid fa-moon-cloud"></i>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li onclick="goAbout()" class="nav-item">
+
+                                <a class="nav-link active" aria-current="page" href="#"><i
+                                        class="fa-duotone fa-user"></i> About</a>
+                            </li>
+                            <li onclick="downloadCV()" class="nav-item">
+                                <a class="nav-link active" href="#"> <i class="fa-duotone fa-file"></i> Resume</a>
+                            </li>
+                            <li onclick="goProject()" class="nav-item">
+                                <a class="nav-link active" href="#"> <i class="fa-solid fa-cubes"></i> Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#"> <i class="fa-brands fa-blogger"></i> Blogs</a>
+                            </li>
+                            <li onclick="goContact()" class="nav-item">
+                                <a class="nav-link active" href="#"> <i class="fa-solid fa-address-book"></i>
+                                    Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+
+    <section>
+        <div class="cont d-flex">
+            <div class=" black-cont vh-100">
+                <div class="" style="padding-top:220px;">
+
+                    <div data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="left-right"
+                        data-aos-easing="ease-out" id="infoMenu" class="black  pt-4 " style=" ">
+                        <div style="position: relative; top: -170px;">
+                            <div class="profile-image bg-dark" data-aos="flip-right" data-aos-duration="2000">
+                                <img data-aos="flip-left" data-aos-duration="2000" src="./image/anindya.jpeg" alt="">
+                            </div>
+                            <h2 id="AB" class="text-center">
+                                Anindya Baul Mridul
+                            </h2>
+                            <div id="FrontEnd"
+                                class="design-box mt-4  mx-auto d-flex justify-content-center align-items-center">
+                                <p class="fs-5 m-0 ">
+                                    Front-End Designer
+                                </p>
+                            </div>
+                            <div
+                                class="mx-auto d-flex justify-content-center align-items-center fs-2 gap-3 mt-4 icon-font">
+
+                                <div>
+                                    <a target="_blank" href="https://github.com/AnindyaBaul?tab=repositories"><i
+                                            class="fa-brands fa-github text-light"></i></a>
+                                </div>
+
+                                <div>
+                                    <a target="_blank" href="https://www.linkedin.com/in/anindya-baul-292760238/"><i
+                                            class="fa-brands fa-linkedin text-info"></i></a>
+                                </div>
+                                <div>
+                                    <a href="https://api.whatsapp.com/send?phone=01408306496"> <i
+                                            class="fa-brands fa-whatsapp text-success"></i></a>
+                                </div>
+
+                            </div>
+                            <div class="contact d-flex mx-auto flex-column ">
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <div
+                                        style="background-color:black; height:80%; width: 20% ;display: flex; justify-content: center; align-items: center; font-size: 25px; color:#52e4fa;">
+                                        <i class="fa-duotone fa-mobile-button"></i>
+                                    </div>
+                                    <div>
+                                        <small>
+                                            phone
+                                        </small>
+                                        <p>
+                                            +8801408306496
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <div
+                                        style="background-color:black; height:80%; width: 20% ;display: flex; justify-content: center; align-items: center; font-size: 25px; color:#52e4fa;">
+                                        <i class="fa-duotone fa-location-dot"></i>
+                                    </div>
+                                    <div>
+                                        <small>
+                                            Location
+                                        </small>
+                                        <p>
+                                            Narsingdi/Dhaka/Bangladesh
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <div
+                                        style="background-color:black; height:80%; width: 20% ;display: flex; justify-content: center; align-items: center; font-size: 25px; color:#fa7952;">
+                                        <i class="fa-sharp fa-solid fa-envelopes"></i>
+                                    </div>
+                                    <div>
+                                        <small>
+                                            Email
+                                        </small>
+                                        <p>
+                                            midnightcoders71@gmail.com
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <div
+                                        style="background-color:black; height:80%; width: 20% ;display: flex; justify-content: center; align-items: center; font-size: 25px; color:#fa5252;">
+                                        <i class="fa-duotone fa-cake-candles"></i>
+                                    </div>
+                                    <div>
+                                        <small>
+                                            Birthday
+                                        </small>
+                                        <p>
+                                            23/7/1995
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <div class="d-flex justify-content-center align-items-center mt-3">
+                                    <button class="cv"><a style="text-decoration:none; color:black;"
+                                            href="https://drive.google.com/uc?export=download&id=1bvue_EXKmbiiKNS94eEsBg8X6Os8ln4L">Download
+                                            CV <i class="fa-duotone fa-download"></i></a></button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="main-right  vh-100" style="padding-top:220px;">
+                <div class="d-flex miniNavCont justify-content-end">
+                    <div id="miniNav" data-aos="fade-left" data-aos-duration="2000" data-aos-easing="ease-out"
+                        class="icon-box-2 d-flex">
+                        <div id="aboutWhite" onclick="goAbout()" class="about">
+                            <i class="fa-duotone fa-user"></i>
+                            <p class="m-0" style="font-size:20px;">
+                                about
+                            </p>
+                        </div>
+                        <div onclick="downloadCV()" id="resumeWhite" class="resume">
+                            <i class="fa-duotone fa-file"></i>
+                            <p class="m-0" style="font-size:20px;">
+                            <p class="m-0" style="font-size:20px;">
+                                <a id="resumeWhiteA" style="text-decoration:none;"
+                                    href="https://drive.google.com/uc?export=download&id=1bvue_EXKmbiiKNS94eEsBg8X6Os8ln4L">
+                                    Resume</a>
+                            </p>
+                        </div>
+                        <div onclick="goProject()" id="workWhite" class="resume">
+                            <i class="fa-solid fa-cubes"></i>
+                            <p class="m-0" style="font-size:20px;">
+                                <a id="workWhiteA" style="text-decoration: none;">Projects</a>
+                            </p>
+                        </div>
+                        <div onclick="goBlogs()" id="blogsWhite" class="resume">
+                            <i class="fa-brands fa-blogger"></i>
+                            <p class="m-0" style="font-size:20px;">
+                                Blogs
+                            </p>
+                        </div>
+                        <div onclick="goContact()" id="ContactWhite" class="resume">
+                            <i class="fa-solid fa-address-book"></i>
+                            <p class="m-0" style="font-size:20px;">
+                                <a id="ContactWhiteA" style="text-decoration:none; color: white;">Contact</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="infoAbout" data-aos="fade-up" data-aos-duration="2000" data-aos-easing="ease-out"
+                    class="about-me pb-5 flex-column ">
+                    <h1 id="what" class="whatC ">
+                        Project Showcase
+                    </h1>
+                    <h1 id="what2" class="whatC2">
+                        Project Showcase
+                    </h1>
+
+                    <div class="video-cont">
+
+                        <iframe src="https://drive.google.com/file/d/1mv1awNPgqIa2jUeST1IB0rQdxlSOWGzR/preview"
+                            allow="autoplay"></iframe>
+
+                        <iframe src="https://drive.google.com/file/d/1pRD-0HKsGVqkDFABlPD0iZ876D3HJ8JE/preview"
+                            allow="autoplay"></iframe>
+
+                        <iframe src="https://drive.google.com/file/d/1YGwhWPrE6zpFVObMQeumuyOGCLRNIQFq/preview"
+                            allow="autoplay"></iframe>
+
+                        <iframe src="https://drive.google.com/file/d/1M41buEJEdkKh_JFav8WD76WCCA4xy2ts/preview"
+                            allow="autoplay"></iframe>
+
+                        <iframe src="https://drive.google.com/file/d/1LaaN2NdCDoyYi_i76y0P5ZpNMjPtzZ-0/preview"
+                            allow="autoplay"></iframe>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+    </section>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+    <!-- aosJs -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        $(window).on("load", function () {
+            $(".pre-loader-cont").fadeOut("slow");
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+@keyframes up{
+    0%{
+        bottom: 0px;
+    }
+    25%{
+        bottom: 50px;
+    }
+    50%{
+        bottom: 100px;
+    }
+    75%{
+        bottom: 150px;
+    }
+}
+@keyframes swipe {
+    to{
+        left: 110%;
+    }
+}
+@keyframes blink {
+    0%{
+        border: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+body{
+    background-color: rgb(9, 13, 34);
+    color: snow;
+    font-family: 'Source Code Pro', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 40px;
+    /* transform: scale(2); */
+}
+.border{
+    /* border: 1px solid red; */
+}
+p{
+    padding: 0;
+    margin: 0;
+}
+span{
+    padding: 0;
+    color: tomato;
+    display: inline-block;
+}
+ul{
+    list-style: none;
+    padding-top: 2px;
+    padding-left: 20px;
+    margin: 0;
+    height:6.125%;
+    overflow: hidden;
+    width: 500px;
+    position: relative;
+    /* bottom: 150px; */
+}
+li{
+    position: relative;
+    /* bottom: 150px; */
+    animation: up 12s steps(1) infinite;
+    width: fit-content;
+    
+}
+li::after{
+    content: '';
+    background-color:rgb(9, 13, 34) ;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-left: 2px solid tomato;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    animation: swipe 3s steps(15) infinite,
+    blink 500ms ease infinite;
+}
